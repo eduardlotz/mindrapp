@@ -74,8 +74,6 @@ input[type="text"] {
     box-shadow: none;
     border-color: $accent-color;
   }
-
-  
 }
 
 ::placeholder {
@@ -132,10 +130,9 @@ input[type="text"] {
 }
 
 @media only screen and (max-width: 600px) {
-
   .background-svg {
-    display: none;
-    \
+    display: none !important;
+  }
   .container {
     margin-top: 80px;
     width: 100%;
