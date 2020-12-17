@@ -13,7 +13,7 @@ class App extends React.Component {
   componentDidMount() {
     // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml11 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\xFF]|\w)/g, "<span class='letter'>$&</span>");
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
 
     var tl = anime.timeline({
       easing: 'easeOutExpo',
