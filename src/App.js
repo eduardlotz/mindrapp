@@ -12,27 +12,31 @@ import imgGuessResults from "./assets/results-guess.jpg";
 class App extends React.Component {
   componentDidMount() {
     // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml11 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+    var textWrapper = document.querySelector(".ml11 .letters");
+    /* eslint-disable no-control-regex */
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /([^\x00-\x80]|\w)/g,
+      "<span class='letter'>$&</span>"
+    );
 
     var tl = anime.timeline({
-      easing: 'easeOutExpo',
-  duration: 750
+      easing: "easeOutExpo",
+      duration: 750,
     });
 
     tl.add({
-      targets: '.ml11 .line',
-      scaleY: [0,1],
-      opacity: [0.5,1],
+      targets: ".ml11 .line",
+      scaleY: [0, 1],
+      opacity: [0.5, 1],
       easing: "easeOutExpo",
-      duration: 700
+      duration: 700,
     }).add({
-      targets: '.ml11 .letter',
-      opacity: [0,1],
+      targets: ".ml11 .letter",
+      opacity: [0, 1],
       easing: "easeOutExpo",
       duration: 600,
-      offset: '-=775',
-      delay: (el, i) => 34 * (i+1)
+      offset: "-=775",
+      delay: (el, i) => 34 * (i + 1),
     });
   }
 
@@ -51,7 +55,8 @@ textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<
             <h1 className="ml11">
               <span class="text-wrapper">
                 <span class="letters">
-                  Something new to play with your friends online                </span>
+                  Something new to play with your friends online{" "}
+                </span>
               </span>
             </h1>
             <p className="subheader">
