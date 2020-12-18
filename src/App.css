@@ -318,6 +318,8 @@ body {
   font-family: "HK Grotesk", sans-serif;
   height: 100%;
   overflow: hidden;
+  background: -webkit-gradient(linear, right top, left top, from(#F6F9FE), to(#FFFFFF));
+  background: linear-gradient(270deg, #F6F9FE 0%, #FFFFFF 100%);
 }
 
 .background-container {
