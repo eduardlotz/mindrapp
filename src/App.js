@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 import anime from "animejs/lib/anime.es.js";
+import SvgLines from "react-mt-svg-lines";
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 import leftDecorativeLine from "./assets/decorativeLineLeft.svg";
 import rightDecorativeLine from "./assets/decorativeLineRight.svg";
@@ -43,12 +46,22 @@ class App extends React.Component {
   render() {
     return (
       <div className="background-container">
-        <img
-          src={leftDecorativeLine}
-          className="line-left"
-          alt="decorative line"
-        />
-
+        <SvgLines animate={true} duration={5000}>
+          <svg
+            className="line-left"
+            viewBox="0 0 1019 1080"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-1079 465.363C-839.848 273.682 -633.404 116.893 -502.27 159.341C-371.136 201.788 -395.434 381.524 -310.474 422.329C-225.514 463.134 -150.129 411.337 -90.4288 357.141C-30.7282 302.946 87.5281 196.938 190.488 246.388C293.449 295.838 276.306 460.676 273.892 532.119C271.479 603.561 283.262 772.064 322.631 846.782C362 921.5 410 892 425 951.5C440 1011 292.96 1104.09 388 1149.74C483.04 1195.38 641.682 1087.66 770.94 1149.74"
+              stroke="#F6F9FE"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </SvgLines>
         <div className="form-container">
           <img src={logo} className="logo" alt="logo" />
           <form>
@@ -59,10 +72,10 @@ class App extends React.Component {
                 </span>
               </span>
             </h1>
-            <p className="subheader">
+            <p className="subheader blur-in delay-3">
               Enter your email and you’ll get notified when it’s ready.
             </p>
-            <div className="d-flex justify-content-center align-items-center w-100 input-container">
+            <div className="d-flex justify-content-center align-items-center w-100 input-container blur-in delay-3">
               <input
                 className="align-self-center mr-3"
                 type="email"
@@ -74,27 +87,28 @@ class App extends React.Component {
         </div>
 
         {/* preview images on the right side */}
-        <img
-          src={imgGuessResults}
-          className="anim-float anim-fadein preview-img a"
-          alt="decorative line"
-        />
-        <img
-          src={imgSurveyResults}
-          className="anim-float anim-fadein preview-img b"
-          alt="decorative line"
-        />
-        <img
-          src={imgDoYouKnow}
-          className="anim-float anim-fadein preview-img c"
-          alt="decorative line"
-        />
+        <div className="images-container fade-in-bottom delay-3">
+          <img src={imgGuessResults} className="preview-img a" />
+          <img src={imgSurveyResults} className="preview-img b" />
+          <img src={imgDoYouKnow} className="preview-img c" />
+        </div>
 
-        <img
-          src={rightDecorativeLine}
-          className="line-right"
-          alt="decorative line"
-        />
+        <SvgLines animate={true} duration={5000}>
+          <svg
+            className="line-right"
+            viewBox="0 0 751 1052"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M749 1049.5C472.676 975.065 241.965 908.701 223.456 832.023C204.946 755.346 377.483 723.958 377.483 671.046C377.483 618.134 298.156 592.575 223.456 575.536C148.756 558.496 2 524.417 2 460.295C2 396.173 158.011 364.785 223.456 348.642C288.901 332.5 466 270 486 247.5C506 225 428.5 198 444 174.5C459.5 151 679.5 239.689 679.5 180.5C679.5 121.311 565 27.5 565 -53"
+              stroke="#4A8CEF"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </SvgLines>
       </div>
     );
   }

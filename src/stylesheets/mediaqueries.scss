@@ -60,10 +60,47 @@
     &-left {
       display: none;
     }
-  
+
     &-right {
       display: none;
+    }
+  }
+}
 
+@media only screen and (max-width: 1200px) {
+  .form-container {
+    width: 100% !important;
+  }
+
+  .background-container {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .images-container {
+    flex-direction: row !important;
+    left: -50% !important	;
+    top: auto !important;
+    right: auto !important;  
+    bottom: 15% !important	;
+  }
+
+  .preview-img {
+    margin: 0 16px !important;
+  }
+
+  .line {
+    &-left {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      width: auto;
+      height: 747px;
+    }
+  
+    &-right {
+      right: -30% !important;
     }
   }
 }
