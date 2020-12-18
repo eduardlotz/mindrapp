@@ -2,11 +2,7 @@ import React from "react";
 import "./App.css";
 import anime from "animejs/lib/anime.es.js";
 import SvgLines from "react-mt-svg-lines";
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
 
-import leftDecorativeLine from "./assets/decorativeLineLeft.svg";
-import rightDecorativeLine from "./assets/decorativeLineRight.svg";
 import logo from "./assets/mindr-logo.svg";
 import imgDoYouKnow from "./assets/do-you-know.jpg";
 import imgSurveyResults from "./assets/survey-results.jpg";
@@ -88,9 +84,9 @@ class App extends React.Component {
 
         {/* preview images on the right side */}
         <div className="images-container fade-in-bottom delay-3">
-          <img src={imgGuessResults} className="preview-img a" />
-          <img src={imgSurveyResults} className="preview-img b" />
-          <img src={imgDoYouKnow} className="preview-img c" />
+          <img src={imgGuessResults} className="preview-img a" alt="Gamemode Quiz"/>
+          <img src={imgSurveyResults} className="preview-img b" alt="Gamemode Survey"/>
+          <img src={imgDoYouKnow} className="preview-img c" alt="Gamemode Do you know me?"/>
         </div>
 
         <SvgLines animate={true} duration={5000}>
