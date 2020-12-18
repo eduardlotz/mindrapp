@@ -59,7 +59,7 @@ class App extends React.Component {
           </svg>
         </SvgLines>
         <div className="form-container">
-          <img src={logo} className="logo" alt="logo" />
+          <img src={logo} className="logo tilt-in-top-1" alt="logo" />
           <form>
             <h1 className="ml11">
               <span class="text-wrapper">
@@ -68,16 +68,16 @@ class App extends React.Component {
                 </span>
               </span>
             </h1>
-            <p className="subheader blur-in delay-3">
+            <p className="subheader blur-in delay-3-2">
               Enter your email and you’ll get notified when it’s ready.
             </p>
-            <div className="d-flex justify-content-center align-items-center w-100 input-container blur-in delay-3">
+            <div className="d-flex justify-content-center align-items-center w-100 input-container">
               <input
-                className="align-self-center mr-3"
+                className="align-self-center mr-3  blur-in delay-3-5"
                 type="email"
                 placeholder="Enter your email"
               />
-              <button className="btn-cta">Notify me!</button>
+              <button className="btn-cta  blur-in delay-3-8">Notify me!</button>
             </div>
           </form>
         </div>

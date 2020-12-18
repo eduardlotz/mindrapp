@@ -27,35 +27,25 @@
 
 @-webkit-keyframes blur-in {
   0% {
-    -webkit-transform: scaleX(2.5) scaleY(0.2);
-    transform: scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
+    -webkit-transform: translateY(16px);
+    transform: translateY(16px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-    transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-    filter: blur(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); 
     opacity: 1;
   }
 }
 @keyframes blur-in {
   0% {
-    
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
+    -webkit-transform: translateY(16px);
+    transform: translateY(16px);
     opacity: 0;
   }
   100% {
-    
-    -webkit-filter: blur(0);
-    filter: blur(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); 
     opacity: 1;
   }
 }
@@ -85,9 +75,35 @@
   }
 }
 
+ @-webkit-keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
 
 .blur-in {
-  filter: blur(20px);
+  -webkit-transform: translateY(16px);
+  transform: translateY(16px);
   opacity: 0;
   -webkit-animation: blur-in 2.4s cubic-bezier(0.23, 1, 0.32, 1)
     forwards;
@@ -102,12 +118,29 @@
 	        animation: fade-in-bottom 2.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
 }
 
+.tilt-in-top-1 {
+	-webkit-animation: tilt-in-top-1 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+	        animation: tilt-in-top-1 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
 .delay-1 {
   animation-delay: 1s;
 }
 
 .delay-3 {
   animation-delay: 3s;
+
+  &-2 {
+    animation-delay: 3.2s;
+  }
+
+  &-5 {
+    animation-delay: 3.5s;
+  }
+
+  &-8 {
+    animation-delay: 3.8s;
+  }
 }
 
 .delay-5 {
