@@ -58,16 +58,37 @@ class App extends React.Component {
             />
           </svg>
         </SvgLines>
+
+        <img src={logo} className="logo tilt-in-top-1" alt="logo" />
+        <h1 className="ml11">
+          <span class="text-wrapper">
+            <span class="letters">
+              Something new to play with your friends online{" "}
+            </span>
+          </span>
+        </h1>
+
+        {/* preview images on the right side */}
+        <div className="images-container fade-in-bottom delay-3">
+          <img
+            src={imgGuessResults}
+            className="preview-img a"
+            alt="Gamemode Quiz"
+          />
+          <img
+            src={imgSurveyResults}
+            className="preview-img b"
+            alt="Gamemode Survey"
+          />
+          <img
+            src={imgDoYouKnow}
+            className="preview-img c"
+            alt="Gamemode Do you know me?"
+          />
+        </div>
+
         <div className="form-container">
-          <img src={logo} className="logo tilt-in-top-1" alt="logo" />
           <form>
-            <h1 className="ml11">
-              <span class="text-wrapper">
-                <span class="letters">
-                  Something new to play with your friends online{" "}
-                </span>
-              </span>
-            </h1>
             <p className="subheader blur-in delay-3-2">
               Enter your email and you’ll get notified when it’s ready.
             </p>
@@ -80,13 +101,6 @@ class App extends React.Component {
               <button className="btn-cta  blur-in delay-3-8">Notify me!</button>
             </div>
           </form>
-        </div>
-
-        {/* preview images on the right side */}
-        <div className="images-container fade-in-bottom delay-3">
-          <img src={imgGuessResults} className="preview-img a" alt="Gamemode Quiz"/>
-          <img src={imgSurveyResults} className="preview-img b" alt="Gamemode Survey"/>
-          <img src={imgDoYouKnow} className="preview-img c" alt="Gamemode Do you know me?"/>
         </div>
 
         <SvgLines animate={true} duration={5000}>
