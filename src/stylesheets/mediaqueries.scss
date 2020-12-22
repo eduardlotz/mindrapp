@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   body {
     padding: 40px 16px !important;
-    width: 100%;
+    width: 100vw !important;
   }
   .background-svg {
     display: none !important;
@@ -37,6 +37,7 @@
     flex-direction: row !important;
     position: relative !important;
     margin: 16px auto;
+    overflow-x: hidden;
   }
 
   .preview-img {
@@ -46,7 +47,7 @@
   }
 
   .background-container {
-    width: 100%;
+    width: 100% !important;
   }
 
   .input-container {
