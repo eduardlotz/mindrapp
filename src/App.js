@@ -102,7 +102,6 @@ class App extends React.Component {
             </div>
           </form>
         </div>
-
         <SvgLines animate={true} duration={5000}>
           <svg
             className="line-right"

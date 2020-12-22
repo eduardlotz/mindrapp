@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   body {
     padding: 40px 16px !important;
-    width: 100vw !important;
+    width: 100% !important;
   }
   .background-svg {
     display: none !important;
@@ -44,7 +44,7 @@
             flex-direction: row !important;
     position: relative !important;
     margin: 16px auto;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .preview-img {
     margin: 0 16px !important;
@@ -103,7 +103,16 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  body {
+    padding: 40px 40px !important;
+  }
   .form-container {
+    width: 100% !important;
+  }
+  .form-container .subheader,
+  .form-container input,
+  .form-container h1,
+  .form-container button {
     width: 100% !important;
   }
   .background-container {
@@ -114,16 +123,17 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100% !important;
   }
   .images-container {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
-    left: -50% !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: 15% !important;
+    position: relative !important;
+    margin: 16px auto;
+    overflow: hidden;
+    left: -50%;
   }
   .preview-img {
     margin: 0 16px !important;
@@ -137,7 +147,7 @@
     height: 747px;
   }
   .line-right {
-    right: -30%;
+    right: -10% !important;
   }
 }
 
@@ -562,7 +572,7 @@ input:focus {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .line-left {
