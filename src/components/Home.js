@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import "../stylesheets/home.css";
 
-import "react-step-progress-bar/styles.css";
-import { ProgressBar } from "react-step-progress-bar";
-
-
 import GameTask from "./GameTask";
 import Navbar from "./Navbar";
 import Icon from "./Icon";

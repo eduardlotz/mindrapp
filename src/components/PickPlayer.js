@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CustomScroll from "react-custom-scroll";
 
 import avatarEddie from "../assets/eddie-avatar.jpg";
 import avatarBenDover from "../assets/bendover-avatar.jpg";
@@ -13,43 +12,43 @@ export default class PickPlayer extends Component {
         <h4 className="pick-header">Pick a player</h4>
         <div className="answer-container pick-player">
           <div className="player">
-            <img className="player-img" src={avatarEddie} />
+            <img className="player-img" src={avatarEddie} alt=""/>
             <h3>eddie</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarBenDover} />
+            <img className="player-img" src={avatarBenDover} alt=""/>
             <h3>Ben Dover</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarMary} />
+            <img className="player-img" src={avatarMary} alt=""/>
             <h3>Mary</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarJeff} />
+            <img className="player-img" src={avatarJeff} alt=""/>
             <h3>Jeff</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarEddie} />
+            <img className="player-img" src={avatarEddie} alt=""/>
             <h3>eddie</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarBenDover} />
+            <img className="player-img" src={avatarBenDover}alt="" />
             <h3>Ben Dover</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarMary} />
+            <img className="player-img" src={avatarMary} alt=""/>
             <h3>Mary</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarJeff} />
+            <img className="player-img" src={avatarJeff} alt=""/>
             <h3>Jeff</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarMary} />
+            <img className="player-img" src={avatarMary}alt="" />
             <h3>Mary</h3>
           </div>
           <div className="player">
-            <img className="player-img" src={avatarJeff} />
+            <img className="player-img" src={avatarJeff} alt=""/>
             <h3>Jeff</h3>
           </div>
         </div>
