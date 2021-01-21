@@ -1,1 +1,505 @@
-/* No CSS *//*# sourceMappingURL=home.css.map */
+.btn-icon {
+  border: none;
+  background-color: transparent;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  outline: 0;
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.35s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.35s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.35s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.35s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-icon svg path {
+  -webkit-transition: fill 0.25s linear;
+  transition: fill 0.25s linear;
+}
+
+.btn-icon:hover {
+  cursor: pointer;
+}
+
+.btn-icon:hover svg path {
+  fill: #a4c5f7;
+}
+
+.btn-icon:focus {
+  outline: none;
+}
+
+.btn-icon:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn-cta {
+  width: 40%;
+  background-color: #4a8cef;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  height: 56px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0px solid #6999e1;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+  -webkit-transition-property: border-width background-color;
+  transition-property: border-width background-color;
+}
+
+.btn-cta.block {
+  width: 100%;
+}
+
+.btn-cta.floating {
+  position: fixed;
+  bottom: 40px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 0px 8px 16px rgba(12, 72, 163, 0.12);
+          box-shadow: 0px 8px 16px rgba(12, 72, 163, 0.12);
+}
+
+.btn-cta svg {
+  margin-left: 16px;
+}
+
+.btn-cta:active {
+  border: 4px solid #6999e1;
+  outline: none;
+}
+
+.btn-cta:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-cta:hover {
+  cursor: pointer;
+  background-color: #3777d7;
+}
+
+.btn-cta:disabled {
+  background-color: #EEEEEE;
+  color: #DBDBDB;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-cta:disabled svg path {
+  fill: #DBDBDB;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0px 16px 40px 16px !important;
+    width: 100% !important;
+  }
+  .answer-container {
+    -ms-grid-columns: 100% !important;
+        grid-template-columns: 100% !important;
+    grid-row-gap: 16px !important;
+  }
+  .answer-container .answer h3 {
+    font-size: 22px !important;
+  }
+  .task-text {
+    font-size: 28px !important;
+  }
+  .answer {
+    height: 64px !important;
+  }
+  .icon {
+    display: none !important;
+  }
+  .btn-cta {
+    width: calc(100% - 32px) !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    padding: 0px 40px;
+  }
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0 30% 80px 30%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "HK Grotesk", sans-serif;
+  height: 100%;
+  background: #ffffff;
+}
+
+nav {
+  height: 160px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.icon span {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+}
+
+.user-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-block .img {
+  width: auto;
+  height: 48px;
+}
+
+.user-block .name {
+  font-family: "HK Grotesk";
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.points-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.points-counter .number {
+  font-family: "HK Grotesk", sans-serif;
+  color: #4a8cef;
+  font-weight: 800;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.points-counter .icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e6eefb;
+}
+
+.points-counter .icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4a8cef;
+}
+
+.group-code {
+  padding: 4px 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #4a8cef33;
+  font-family: "HK Grotesk";
+  color: #4a8cef;
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 24px;
+}
+
+.timer-progressbar {
+  position: relative;
+  height: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+  background-color: #f6f9fe;
+  border-radius: 10px;
+  -webkit-transition: 0.25s ease-in-out width;
+  transition: 0.25s ease-in-out width;
+}
+
+.timer-progressbar .progress {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  width: 75%;
+  border-radius: 10px;
+  background-color: #4a8cef;
+}
+
+.task-text {
+  font-family: "HK Grotesk";
+  font-weight: bold;
+  font-size: 32px;
+  color: #000000;
+}
+
+.round-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.round-counter .current {
+  font-family: "HK Grotesk";
+  font-weight: 800;
+  font-size: 32px;
+  color: #000000;
+}
+
+.round-counter .total {
+  font-family: "HK Grotesk";
+  font-weight: 800;
+  font-size: 18px;
+  color: #ebecee;
+  margin-left: 8px;
+}
+
+.pick-header {
+  font-family: "HK Grotesk";
+  font-weight: bold;
+  font-size: 22px;
+  color: #848484;
+}
+
+.guess-unit {
+  font-family: "HK Grotesk";
+  font-weight: bold;
+  font-size: 20px;
+  color: #848484;
+  margin: 0 16px;
+}
+
+.answer-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+.answer-container.pick-player {
+  grid-column-gap: 16px !important;
+  grid-row-gap: 16px !important;
+}
+
+.answer-container .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 220px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition-property: background-color border-color;
+  transition-property: background-color border-color;
+  background-size: cover;
+}
+
+.answer-container .image:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.answer-container .image.selected {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 16px 32px;
+  height: 132px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #f4f5f7;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -webkit-transition-property: background-color border-color;
+  transition-property: background-color border-color;
+}
+
+.answer h3 {
+  color: #000000;
+  font-family: "HK Grotesk";
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0;
+  text-align: center;
+}
+
+.answer:hover {
+  cursor: pointer;
+  background-color: #f6f9fe;
+  border-color: #4a8cef33;
+}
+
+.answer.selected {
+  color: #4a8cef;
+  background-color: #f6f9fe;
+  border-color: #4a8cef33;
+}
+
+.player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 16px 40px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #f4f5f7;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -webkit-transition-property: background-color border-color;
+  transition-property: background-color border-color;
+}
+
+.player h3 {
+  color: #000000;
+  font-family: "HK Grotesk";
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+  text-align: center;
+}
+
+.player:hover {
+  cursor: pointer;
+  background-color: #f6f9fe;
+  border-color: #4a8cef33;
+}
+
+.player.selected {
+  color: #4a8cef;
+  background-color: #f6f9fe;
+  border-color: #4a8cef33;
+}
+
+.player img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 32px;
+}
+
+input {
+  height: 56px;
+  width: 50%;
+  padding: 16px 24px;
+  background: #ffffff;
+  border: 2px solid #f4f5f7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 16px;
+  color: #000000;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  -webkit-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+
+input.block {
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #4a8cef;
+}
+
+::-webkit-input-placeholder {
+  color: #cecece;
+}
+
+:-ms-input-placeholder {
+  color: #cecece;
+}
+
+::-ms-input-placeholder {
+  color: #cecece;
+}
+
+::placeholder {
+  color: #cecece;
+}
+/*# sourceMappingURL=home.css.map */

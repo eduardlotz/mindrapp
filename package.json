@@ -7,9 +7,12 @@
     "animejs": "^3.2.1",
     "moving-letters": "^1.0.1",
     "react": "^16.6.1",
+    "react-custom-scroll": "^4.2.1",
     "react-dom": "^16.6.1",
     "react-mt-svg-lines": "^0.9.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-spring": "^8.0.27",
+    "react-step-progress-bar": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

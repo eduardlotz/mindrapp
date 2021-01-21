@@ -132,7 +132,7 @@
             flex-direction: row !important;
     position: relative !important;
     margin: 16px auto;
-    overflow: hidden;
+    overflow-x: hidden;
     left: -50%;
   }
   .preview-img {

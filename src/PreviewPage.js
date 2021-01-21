@@ -8,7 +8,7 @@ import imgDoYouKnow from "./assets/do-you-know.jpg";
 import imgSurveyResults from "./assets/survey-results.jpg";
 import imgGuessResults from "./assets/results-guess.jpg";
 
-class App extends React.Component {
+class PreviewPage extends React.Component {
   componentDidMount() {
     // Wrap every letter in a span
     var textWrapper = document.querySelector(".ml11 .letters");
@@ -123,4 +123,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default PreviewPage;

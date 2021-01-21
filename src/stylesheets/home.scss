@@ -1,23 +1,361 @@
-$accent-color: #4a8cef;
+@import "./buttons";
+@import "./colors";
 
-// body {
-//   width: 100%;
-//   margin: 0;
-//   padding: 40px 30%;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   font-family: "HK Grotesk", sans-serif;
-//   height: 100%;
-//   overflow: hidden;
-//   background: #ffffff;
-// }
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0px 16px 40px 16px!important;
+    width: 100% !important;
+  }
 
-// .icon {
-//   span {
-//     font-family: "HK Grotesk", sans-serif;
-//     font-size: 26px;
-//     font-style: normal;
-//     font-weight: 800;
-//     text-align: center;
-//   }
-// }
+  .answer-container {
+    grid-template-columns: 100% !important;
+    grid-row-gap: 16px !important;
+
+    .answer h3 {
+      font-size: 22px !important;
+    }
+  }
+
+  .task-text {
+    font-size: 28px !important;
+  }
+
+  .answer {
+    height: 64px !important;
+  }
+
+  .icon {
+    display: none !important;
+  }
+
+  .btn-cta {
+    width: calc(100% - 32px) !important;
+  }   
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    padding: 0px 40px;
+  }
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0 30% 80px 30%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "HK Grotesk", sans-serif;
+  height: 100%;
+  background: #ffffff;
+}
+
+nav {
+  height: 160px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+}
+
+.icon {
+  span {
+    font-family: "HK Grotesk", sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    text-align: center;
+  }
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+
+  .img {
+    width: auto;
+    height: 48px;
+  }
+
+  .name {
+    font-family: "HK Grotesk";
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+}
+
+.points-counter {
+  display: flex;
+  align-items: center;
+
+  .number {
+    font-family: "HK Grotesk", sans-serif;
+    color: $accent-color;
+    font-weight: 800;
+    font-size: 24px;
+
+    margin-right: 8px;
+  }
+
+  .icon {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    background-color: #e6eefb;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      margin: auto;
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+      background-color: $accent-color;
+    }
+  }
+}
+
+.group-code {
+  padding: 4px 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #4a8cef33;
+
+  font-family: "HK Grotesk";
+  color: $accent-color;
+  font-weight: bold;
+  font-size: 22px;
+
+  margin-left: 24px;
+}
+
+.timer-progressbar {
+  position: relative;
+
+  height: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+
+  background-color: $accent-color-lightest;
+  border-radius: 10px;
+  transition: 0.25s ease-in-out width;
+
+  .progress {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    height: 8px;
+    width: 75%;
+    border-radius: 10px;
+    background-color: $accent-color;
+  }
+}
+
+.task-text {
+  font-family: "HK Grotesk";
+  font-weight: bold;
+  font-size: 32px;
+  color: #000000;
+}
+
+.round-counter {
+  display: flex;
+  align-items: center;
+
+  .current {
+    font-family: "HK Grotesk";
+    font-weight: 800;
+    font-size: 32px;
+    color: #000000;
+  }
+
+  .total {
+    font-family: "HK Grotesk";
+    font-weight: 800;
+    font-size: 18px;
+    color: #ebecee;
+
+    margin-left: 8px;
+  }
+}
+
+.pick-header {
+  font-family: "HK Grotesk";
+  font-weight: bold;
+  font-size: 22px;
+  color: #848484;
+}
+
+.guess-unit {
+  font-family: "HK Grotesk";
+  font-weight: bold;
+  font-size: 20px;
+  color: #848484;
+  margin: 0 16px;
+}
+
+.answer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 40px;
+
+  &.pick-player {
+    grid-column-gap: 16px !important;
+    grid-row-gap: 16px !important;
+  }
+
+  .image {
+    display: flex;
+    width: 100%;
+    height: 220px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-property: background-color border-color;
+    background-size: cover;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    &.selected {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.answer {
+  display: flex;
+  width: 100%;
+  padding: 16px 32px;
+  height: 132px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease-in-out;
+  transition-property: background-color border-color;
+
+  h3 {
+    color: #000000;
+    font-family: "HK Grotesk";
+    font-weight: 600;
+    font-size: 26px;
+    margin: 0;
+    text-align: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $accent-color-lightest;
+    border-color: #4a8cef33;
+  }
+
+  &.selected {
+    color: $accent-color;
+    background-color: $accent-color-lightest;
+    border-color: #4a8cef33;
+  }
+
+}
+
+.player {
+  display: flex;
+  width: 100%;
+  padding: 16px 40px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: 0.25s ease-in-out;
+  transition-property: background-color border-color;
+
+  h3 {
+    color: #000000;
+    font-family: "HK Grotesk";
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0;
+    text-align: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $accent-color-lightest;
+    border-color: #4a8cef33;
+  }
+
+  &.selected {
+    color: $accent-color;
+    background-color: $accent-color-lightest;
+    border-color: #4a8cef33;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 32px;
+  }
+}
+
+input {
+  height: 56px;
+  width: 50%;
+  padding: 16px 24px;
+  background: #ffffff;
+  border: 2px solid #f4f5f7;
+  box-sizing: border-box;
+  border-radius: 16px;
+  color: #000000;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  transition: border 0.15s ease-in-out;
+
+  &.block {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: $accent-color;
+  }
+}
+
+::placeholder {
+  color: #cecece;
+}
