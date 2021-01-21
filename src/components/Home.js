@@ -30,7 +30,7 @@ export default class Home extends Component {
   };
 
   startTimer() {
-    if (this.state.timer.left == 0) {
+    if (this.state.timer.left === 0) {
       this.timer = setInterval(this.state.timer.total, 1000);
     }
   }
@@ -44,7 +44,7 @@ export default class Home extends Component {
     });
 
     // Check if we're at zero.
-    if (seconds == 0) {
+    if (seconds === 0) {
       clearInterval(this.timer);
     }
   }
