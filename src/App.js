@@ -60,6 +60,7 @@ class App extends React.Component {
         </SvgLines>
 
         <img src={logo} className="logo tilt-in-top-1" alt="logo" />
+
         <h1 className="ml11">
           <span class="text-wrapper">
             <span class="letters">
@@ -67,6 +68,7 @@ class App extends React.Component {
             </span>
           </span>
         </h1>
+
 
         {/* preview images on the right side */}
         <div className="images-container fade-in-bottom delay-3">
@@ -87,21 +89,6 @@ class App extends React.Component {
           />
         </div>
 
-        <div className="form-container">
-          <form>
-            <p className="subheader blur-in delay-3-2">
-              Enter your email and you’ll get notified when it’s ready.
-            </p>
-            <div className="d-flex justify-content-center align-items-center w-100 input-container">
-              <input
-                className="align-self-center mr-3  blur-in delay-3-5"
-                type="email"
-                placeholder="Enter your email"
-              />
-              <button className="btn-cta  blur-in delay-3-8">Notify me!</button>
-            </div>
-          </form>
-        </div>
         <SvgLines animate={true} duration={5000}>
           <svg
             className="line-right"

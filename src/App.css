@@ -132,7 +132,7 @@
             flex-direction: row !important;
     position: relative !important;
     margin: 16px auto;
-    overflow: hidden;
+    overflow-x: hidden;
     left: -50%;
   }
   .preview-img {
@@ -464,6 +464,17 @@ h1 {
   line-height: 74px;
   letter-spacing: 0em;
   text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+h4 {
+  color: #4a8cef;
+  font-family: "HK Grotesk", sans-serif !important;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
   margin: 0;
   margin-bottom: 8px;
 }
