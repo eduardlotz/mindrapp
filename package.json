@@ -5,6 +5,7 @@
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
     "animejs": "^3.2.1",
+    "framer-motion": "^3.10.2",
     "moving-letters": "^1.0.1",
     "react": "^16.6.1",
     "react-custom-scroll": "^4.2.1",

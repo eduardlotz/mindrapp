@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Logo extends Component {
   render() {
     return (
-      <span className="d-flex m-0 flex-column align-items-center icon">
+      <span className="d-flex flex-column">
         <svg
           width={this.props.size ? this.props.size : "180"}
           height="auto"

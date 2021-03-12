@@ -1,9 +1,14 @@
 @import "./buttons";
 @import "./colors";
+@import "./icons";
+
+$desktopViewport: 1200px;
+$tabletViewport: 768px;
+$mobileViewport: 320px;
 
 @media only screen and (max-width: 600px) {
   body {
-    padding: 0px 16px 40px 16px!important;
+    padding: 0px 16px 40px 16px !important;
     width: 100% !important;
   }
 
@@ -30,7 +35,7 @@
 
   .btn-cta {
     width: calc(100% - 32px) !important;
-  }   
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -41,17 +46,204 @@
 
 body {
   width: 100%;
+  height: 100%;
+
   margin: 0;
-  padding: 0 30% 80px 30%;
+  display: flex;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "HK Grotesk", sans-serif;
-  height: 100%;
   background: #ffffff;
 }
 
+.main-container {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  padding: 40px 16px;
+  @media screen and (min-width: $tabletViewport) {
+  }
+
+  @media screen and (min-width: $desktopViewport) {
+    padding: 0;
+
+    .half-container {
+      width: 50%;
+      max-width: 50%;
+      margin: 0;
+      height: 100%;
+      align-items: flex-start;
+
+      &.info-box {
+        padding: 32px 6rem 32px 3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+
+        .content-block {
+          width: 100%;
+        }
+
+        h1 {
+          width: 100%;
+          margin: 32px 0 8px 0;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 38px;
+          line-height: 50px;
+          color: $black;
+        }
+
+        p {
+          width: 100%;
+          font-family: HK Grotesk;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 26px;
+
+          color: $grey;
+
+          span.bold {
+            font-weight: bold;
+            color: $black;
+          }
+        }
+
+        small {
+          font-family: HK Grotesk;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 23px;
+          display: flex;
+          align-items: center;
+
+          color: $light-grey;
+        }
+      }
+
+      &.start-game {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 32px 6rem 32px 3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $light-blue;
+
+        justify-content: center;
+
+        .block {
+          width: 100%;
+          &:first-child {
+            margin-bottom: 180px;
+          }
+
+          h2 {
+            font-family: HK Grotesk;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 42px;
+            color: $black;
+          }
+
+          a {
+            font-family: HK Grotesk;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+
+            text-decoration-line: underline;
+
+            color: $accent-color;
+          }
+        }
+
+        .group-code {
+          padding: 16px 24px;
+
+          width: 86px;
+          height: 58px;
+          left: 996px;
+          top: 270px;
+
+          // background: rgba(159, 187, 242, 0.1);
+          background: transparent;
+          border: 2px solid #9fbbf2;
+          border-radius: 16px;
+          color: #6599e8;
+
+          font-family: HK Grotesk;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 26px;
+        }
+
+        .form--group-code {
+          display: flex;
+          flex-direction: row;
+
+          .group-code {
+            margin: 0 16px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.how-to-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin: 16px 0 40px 0;
+
+  .game-mode-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 32px;
+    height: 194px;
+
+    background: #ffffff;
+    border: 2px solid #f4f5f7;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.25s ease-out;
+
+    &:hover {
+      border-color: $black;
+
+    }
+
+    img {
+      width: 128px;
+      height: 128px;
+      margin-bottom: 8px;
+    }
+
+    h5 {
+      font-family: HK Grotesk;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 26px;
+
+      color: $black;
+    }
+  }
+}
+
 nav {
-  height: 160px;
+  height: 80px;
   width: 100%;
 
   display: flex;
@@ -59,7 +251,15 @@ nav {
   align-items: center;
 
   margin: 0;
+
+  padding: 4px 16px;
+
+  @media screen and (min-width: $desktopViewport) {
+    padding: 8px 6rem;
+  }
 }
+
+/* INGAME RELATED STYLES */
 
 .icon {
   span {
@@ -285,7 +485,6 @@ nav {
     background-color: $accent-color-lightest;
     border-color: #4a8cef33;
   }
-
 }
 
 .player {

@@ -28,7 +28,7 @@
 }
 
 .btn-cta {
-    width: 40%;
+  width: 40%;
   background-color: $accent-color;
   border-radius: 16px;
   display: flex;
@@ -45,21 +45,21 @@
   transition-property: border-width background-color transform;
 
   &.block {
-      width: 100%;
+    width: 100%;
   }
 
   &.floating {
-      position: fixed;
-      bottom: 40px;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
+    position: fixed;
+    bottom: 40px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 
-      box-shadow: 0px 8px 16px rgba(12, 72, 163, 0.12);
+    box-shadow: 0px 8px 16px rgba(12, 72, 163, 0.12);
   }
 
   svg {
-      margin-left: 16px;
+    margin-left: 16px;
   }
 
   &:active {
@@ -79,12 +79,57 @@
   }
 
   &:disabled {
-    background-color: #EEEEEE;
-    color: #DBDBDB;
+    background-color: #eeeeee;
+    color: #dbdbdb;
     box-shadow: none;
 
     svg path {
-      fill: #DBDBDB;
+      fill: #dbdbdb;
     }
+  }
+}
+
+.btn {
+  border-radius: 16px;
+  &.--lg {
+    padding: 16px 72px;
+    height: 56px;
+
+    font-family: HK Grotesk;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.--icon-left {
+      span {
+        margin-right: 16px;
+      }
+    }
+
+    &.--icon-right {
+      span {
+        margin-left: 16px;
+      }
+    }
+
+    color: #ffffff;
+  }
+
+  &.--primary {
+    background: $accent-color;
+  }
+
+  &.--secondary {
+    background: rgba(159, 187, 242, 0.2);
+    border: 2px solid #9fbbf2;
+    color: #6599E8;
+  }
+
+  &.--block {
+    width: 100%;
   }
 }

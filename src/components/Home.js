@@ -1,79 +1,97 @@
-import React, { Component } from "react";
-import "../stylesheets/home.css";
+import React from "react";
+import { motion } from "framer-motion";
+import GameModeTab from "./GameModeTab";
 
-import GameTask from "./GameTask";
-import Navbar from "./Navbar";
-import Icon from "./Icon";
-import PickAnswer from "./PickAnswer";
-import GuessNumber from "./GuessNumber";
-import PickPlayer from "./PickPlayer";
-import PickImage from "./PickImage";
+import "../stylesheets/dist/home.css";
+import Logo from "./Logo";
 
-export default class Home extends Component {
-  state = {
-    timer: {
-      total: 40,
-      left: 40,
-    },
-    round: {
-      current: 1,
-      total: 20,
-    },
-    tasks: [
-      "Who invented the light bulb?",
-      "How tall is the Eiffel Tower?",
-      "Who would be most likely to get a face tattoo?",
-      "Which picture shows Thomas Edison?",
-    ],
-    currentTask: 0,
-    modes: [<PickAnswer />, <GuessNumber />, <PickPlayer />, <PickImage />],
-  };
+const gameModes = [
+  {
+    title: "Quiz",
+    imageClass: "quiz",
+  },
+  {
+    title: "Draw & Guess",
+    imageClass: "draw-and-guess",
+  },
+  {
+    title: "Most likely",
+    imageClass: "most-likely",
+  },
+  {
+    title: "Best artist",
+    imageClass: "best-artist",
+  },
+  {
+    title: "Survey",
+    imageClass: "survey",
+  },
+  {
+    title: "Who knows you",
+    imageClass: "who-knows-you",
+  },
+];
 
-  startTimer() {
-    if (this.state.timer.left === 0) {
-      this.timer = setInterval(this.state.timer.total, 1000);
-    }
-  }
-
-  countDown() {
-    // Remove one second, set state so a re-render happens.
-    let seconds = this.state.seconds - 1;
-    this.setState({
-      time: this.secondsToTime(seconds),
-      seconds: seconds,
-    });
-
-    // Check if we're at zero.
-    if (seconds === 0) {
-      clearInterval(this.timer);
-    }
-  }
-
-  selectImage = () => {};
-
-  nextTask = () => {
-    this.state.currentTask < this.state.modes.length - 1
-      ? this.setState({ currentTask: this.state.currentTask + 1 })
-      : this.setState({ currentTask: 0 });
-  };
-
-  render() {
-    return (
-      <>
-        <Navbar />
-        <GameTask
-          task={this.state.tasks[this.state.currentTask]}
-          round={this.state.round}
-          timer={this.state.timer}
-        />
-          {this.state.modes.map((item, i) => {
-            return this.state.currentTask === i ? item : <></>;
-          })}
-        <button className="btn-cta glossy floating" onClick={this.nextTask}>
-          <span className="text">Submit your answer</span>
-          <Icon width="24" name="arrow-right-circle" fill="#ffffff" />
-        </button>
-      </>
-    );
-  }
+export default function Home() {
+  return (
+    <>
+      <div className="main-container">
+        <div className="info-box half-container">
+          <Logo size="64" />
+          <div className="content-block">
+            <h1>What is mindr?</h1>
+            <p>
+              Mindr is a mix of several{" "}
+              <span className="bold">party & casual</span> games you can play{" "}
+              <span className="bold">online with your friends.</span> You can
+              enable and disable each game mode according to your needs and pick
+              between the{" "}
+              <span className="bold">standard or drinking mode.</span>
+            </p>
+          </div>
+          <div className="content-block">
+            <h1>What games can we play?</h1>
+            <small>Click on a game mode to see how to play.</small>
+            <div className="how-to-container">
+              {gameModes.map((mode, i) => {
+                return (
+                  <GameModeTab
+                    id={i}
+                    title={mode.title}
+                    image={mode.imageClass}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <div className="start-game half-container">
+          <div className="block">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+              <h2>Want to join your friends?</h2>
+              <a href="#">Where is the code?</a>
+            </div>
+            <form action="submit" className="form--group-code">
+              <input type="text" className="group-code" placeholder="----" />
+              <button
+                className="btn --primary --lg --block --icon-right"
+                type="submit"
+              >
+                Join group
+                <span class="icon circle-arrow-right"></span>
+              </button>
+            </form>
+          </div>
+          <div className="block">
+            <div className="create-group">
+              <h2>You're the first one here?</h2>
+              <button className="btn --secondary --lg --block">
+                Create a new group
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
