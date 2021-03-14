@@ -9,7 +9,6 @@ export default function GameModeTab(props) {
         type: "spring",
         default: { duration: 0.2 },
       }}
-      
       className="game-mode-tab"
     >
       <i className={`image ${props.image}`} alt="books" />

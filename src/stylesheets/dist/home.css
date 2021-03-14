@@ -190,6 +190,25 @@ body {
   background: #ffffff;
 }
 
+h2 {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 42px;
+  color: #111111;
+}
+
+a {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #4a8cef;
+}
+
 .main-container {
   width: 100%;
   display: flex;
@@ -265,23 +284,6 @@ body {
   }
   .main-container .half-container.start-game .block:first-child {
     margin-bottom: 180px;
-  }
-  .main-container .half-container.start-game .block h2 {
-    font-family: HK Grotesk;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 42px;
-    color: #111111;
-  }
-  .main-container .half-container.start-game .block a {
-    font-family: HK Grotesk;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    text-decoration-line: underline;
-    color: #4a8cef;
   }
   .main-container .half-container.start-game .group-code {
     padding: 16px 24px;

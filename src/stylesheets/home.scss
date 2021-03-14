@@ -56,6 +56,27 @@ body {
   background: #ffffff;
 }
 
+h2 {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 42px;
+  color: $black;
+}
+
+a {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  text-decoration-line: underline;
+
+  color: $accent-color;
+}
+
 .main-container {
   width: 100%;
   display: flex;
@@ -142,26 +163,7 @@ body {
             margin-bottom: 180px;
           }
 
-          h2 {
-            font-family: HK Grotesk;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 32px;
-            line-height: 42px;
-            color: $black;
-          }
-
-          a {
-            font-family: HK Grotesk;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 21px;
-
-            text-decoration-line: underline;
-
-            color: $accent-color;
-          }
+          
         }
 
         .group-code {
