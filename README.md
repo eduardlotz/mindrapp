@@ -7,8 +7,7 @@ mindr is an online party game for friends staying at home.
 
 **Current Major Tasks**</br>  
 [x] UI Design & game mechanics<br/>
-[ ] React Redux Store for at least 4 game modes<br/>
-[ ] Websockets<br/>
+[ ] users can join a lobby<br/>
 
 ## Deploy Your Own. 
 //i'll keep this here in case you want to deploy your own little apps :)<br/>
