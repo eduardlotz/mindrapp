@@ -1,4 +1,4 @@
-https://mindrapp.de/_
+https://mindrapp.de/
 
 ### mindr - a new online party game. 
 mindr is an online party game for friends staying at home. 
