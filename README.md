@@ -1,4 +1,4 @@
-_Live Example: https://mindrapp.de/_
+https://mindrapp.de/_
 
 ### mindr - a new online party game. 
 mindr is an online party game for friends staying at home. 
