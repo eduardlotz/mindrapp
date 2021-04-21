@@ -3,11 +3,7 @@ https://mindrapp.de/
 ### mindr - a new online party game. 
 mindr is an online party game for friends staying at home. 
 
-*currently working on the initial frontend on the other branch*
-
-**Current Major Tasks**</br>  
-[x] UI Design & game mechanics<br/>
-[ ] users can join a lobby<br/>
+Currently only a landingpage
 
 ## Deploy Your Own. 
 //i'll keep this here in case you want to deploy your own little apps :)<br/>
